@@ -1,4 +1,3 @@
-
 import psutil
 import os
 import time
@@ -9,10 +8,10 @@ process_name = input("Ingrese el nombre del proceso a limitar: ")
 process_name += ".exe"
 
 # Tiempo máximo que permitimos que el proceso se ejecute (en segundos)
-max_process_time = 15
+max_process_time = 36000
 
 # Tiempo de espera para no permitir que se abra el proceso nuevamente (en segundos)
-lockout_time = 60
+lockout_time = 60 * 60 * 24 * 7
 
 # Clave del registro de Windows donde se almacenará el tiempo de bloqueo del proceso
 registry_key = "SOFTWARE\\DetalleApp"
